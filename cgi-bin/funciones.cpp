@@ -27,6 +27,8 @@ int main() {
 
     // Inicializar variables
     char nombre[50] = "";
+    char apellido[50] = "";
+    int edad;
 
     if (query_string != nullptr) {
         // Parsear los parámetros
@@ -34,6 +36,8 @@ int main() {
         char* token = strtok(param, "&");    // Separar los parámetros
         while (token != nullptr) {
             if (sscanf(token, "n=%49s", nombre) == 1) {  }
+            if (sscanf(token, "a=%49s", apellido) == 1) {  }
+            if (sscanf(token, "e=%d", &edad) == 1) {  }
             token = strtok(nullptr, "&");    // Continuar con el siguiente parámetro
         }
         free(param);  // Liberar la memoria
@@ -41,7 +45,9 @@ int main() {
 
     // Generar la respuesta HTTP
     cout << "Content-Type: text/plain\n\n";
-    cout << "Tu nombre es <b>" << nombre << "</b>";
+    cout << "Tu nombre es <b>" << nombre << "</b> ";
+    cout << "<b>" << apellido << "</b>";
+    cout << "<p>Y tienes " << edad << " años.</p>";
 
 
     return 0;
