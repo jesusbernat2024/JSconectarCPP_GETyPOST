@@ -24,6 +24,7 @@ int main() {
         query_string[content_length] = '\0';          // Asegurarse de que sea una cadena terminada
     }
 
+
     // Inicializar variables
     char nombre[50] = "";
 
@@ -32,7 +33,7 @@ int main() {
         char* param = strdup(query_string);  // Hacer una copia de la cadena de consulta
         char* token = strtok(param, "&");    // Separar los parámetros
         while (token != nullptr) {
-            if (sscanf(token, "n=%49s", nombre) == 1) { /* Se ha encontrado n */ }
+            if (sscanf(token, "n=%49s", nombre) == 1) {  }
             token = strtok(nullptr, "&");    // Continuar con el siguiente parámetro
         }
         free(param);  // Liberar la memoria
@@ -41,6 +42,7 @@ int main() {
     // Generar la respuesta HTTP
     cout << "Content-Type: text/plain\n\n";
     cout << "Tu nombre es <b>" << nombre << "</b>";
+
 
     return 0;
 }
