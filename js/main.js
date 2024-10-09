@@ -1,9 +1,11 @@
 
 
-document.getElementById('botonPrueba').onclick = async function (e) {
-    nombre = "Juan";
-    apellido = "Pérez";
-    edad = 38;
+document.getElementById('registroUsuario').onsubmit = async function (e) {
+    e.preventDefault();
+
+    nombre = document.getElementById('usuario').value;
+    apellido =  document.getElementById('apellido').value;
+    edad =  document.getElementById('edad').value;
     
     response = await fetch(`/cgi-bin/funciones.cgi`,{
         method: 'POST',
