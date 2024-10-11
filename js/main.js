@@ -3,9 +3,8 @@
 document.getElementById('registroUsuario').onsubmit = async function (e) {
     e.preventDefault();
 
-    nombre = document.getElementById('usuario').value;
-    apellido =  document.getElementById('apellido').value;
-    edad =  document.getElementById('edad').value;
+    usuario = document.getElementById('usuario').value;
+    contra =  document.getElementById('contra').value;
     
     response = await fetch(`/cgi-bin/funciones.cgi`,{
         method: 'POST',
@@ -13,9 +12,8 @@ document.getElementById('registroUsuario').onsubmit = async function (e) {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: new URLSearchParams({
-            'n':nombre,
-            'a':apellido,
-            'e':edad
+            'u':usuario,
+            'c':contra
         })
     });
     data = await response.text();

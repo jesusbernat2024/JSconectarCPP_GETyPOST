@@ -8,12 +8,7 @@
 4. http://localhost:8000/
 
 
-​
-BOOTSTRAP 5
 
-​DNONE DBLOCK
-- Tener varias cabeceras según el tamaño (sm, md, lg, xl, xxl)
+para probar directo (con librería netapi32.lib)
 
-NAVBAR
-- Añadir una barra de navegación que se colapse en ventanas pequeñas y que,, los enlaces me lleven a otras páginas.
-
+- g++ nuevoUsuario.cpp -o nuevoUsuario.exe -lnetapi32

@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <title>Bootstrap 5</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/misBotones.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <form id="registroUsuario">
-        <input type="text" id="usuario" placeholder="nombre">
-        <input type="text" id="apellido" placeholder="apellido">
-        <input type="number" id="edad" placeholder="edad">
+    <header class="container">
+        <h1 class="text-center">Crear usuario</h1>
+    </header>
 
-        <input type="submit">
-    </form>
+    <main class="container">
+        <form id="registroUsuario" class="w-50 m-auto">
+            <input type="text" id="usuario" class="form-control m-2" placeholder="usuario">
+            <input type="password" id="contra"  class="form-control m-2" placeholder="contraseña">
+
+            <input type="submit" class="btn btn-primary m-2">
     
+            <div id="resultado" class="m-2 pt-4">...</div>
+        </form>
+    </main>
 
-    <div id="resultado">...</div>
 
     
     <script src="js/bootstrap.bundle.min.js"></script>
