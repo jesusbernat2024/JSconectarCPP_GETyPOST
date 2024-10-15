@@ -10,7 +10,7 @@ int main() {
     DWORD dwError = 0;
 
     // Configura los datos del nuevo usuario
-    ui.usri1_name = (LPWSTR)L"nuevoUsuario"; // Nombre del usuario
+    ui.usri1_name = (LPWSTR)L"ejemploJuan"; // Nombre del usuario
     ui.usri1_password = (LPWSTR)L"contraseñaSegura"; // Contraseña
     ui.usri1_priv = USER_PRIV_USER; // Privilegios del usuario (USER_PRIV_USER para usuario estándar)
     ui.usri1_home_dir = NULL;
